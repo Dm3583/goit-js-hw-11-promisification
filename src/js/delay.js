@@ -1,6 +1,7 @@
 const delay = ms => {
     return new Promise(resolve => {
         setTimeout(() => {
+            console.log(`%c TIMER DELAY`, 'color: red; font-size: 25px');
             resolve(ms);
         }, ms)
     });
@@ -8,7 +9,7 @@ const delay = ms => {
 
 const logger = time => console.log(`Resolved after ${time}ms`);
 
-console.log(`%c TIMER DELAY`, 'color: red; font-size: 25px');
+
 
 delay(2000).then(logger); // Resolved after 2000ms
 delay(1000).then(logger); // Resolved after 1000ms
